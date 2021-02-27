@@ -1,13 +1,14 @@
 service: serverless-base
 
-frameworkVersion: '2'
+frameworkVersion: "2"
 
 provider:
   name: aws
   runtime: nodejs12.x
   lambdaHashingVersion: 20201221
+  #profile: # iam profile with permissions to interact with cloud provide
+  #region: ap-southeast-1
   stage: ${opt:stage, 'dev'}
-
 
 package:
   individually: true
